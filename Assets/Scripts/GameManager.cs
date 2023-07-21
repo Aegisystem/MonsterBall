@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         else
         {
             // Si el juego ha terminado, cargar la escena "Menu" con el tiempo obtenido
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown("space"))
             {
                 LoadMenuSceneWithTime();
             }

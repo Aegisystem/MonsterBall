@@ -24,7 +24,7 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(GameManager.Instance.time <= 0)
+        if(GameManager.Instance.time <= 0 || GameManager.Instance.finish)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
