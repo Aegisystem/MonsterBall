@@ -7,6 +7,8 @@ TagManager:
   - Meta
   - TP
   - Platform
+  - Enemy
+  - Slime
   layers:
   - Default
   - TransparentFX
