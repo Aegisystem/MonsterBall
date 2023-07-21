@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        tiempoObtenido = PlayerPrefs.GetFloat("TiempoObtenido");
+        tiempoObtenido = PlayerPrefs.GetFloat("Tiempo");
         
         int minutes = Mathf.FloorToInt(tiempoObtenido / 60f);
         int seconds = Mathf.FloorToInt(tiempoObtenido % 60f);

@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
     private void LoadMenuSceneWithTime()
     {
         float tiempoObtenido = 90f - time;
-        if (PlayerPrefs.GetFloat("TiempoObtenido") > tiempoObtenido)
+        if (PlayerPrefs.GetFloat("Tiempo") > tiempoObtenido || PlayerPrefs.GetFloat("Tiempo") == 0)
         {
-            PlayerPrefs.SetFloat("TiempoObtenido", tiempoObtenido);
+            PlayerPrefs.SetFloat("Tiempo", tiempoObtenido);
         }
         SceneManager.LoadScene(0);
     }
