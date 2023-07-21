@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
         {
             if(time<10f && time > 9f) tmp.color = Color.red;
             UpdateTimerText();
+            
         }
         else
         {
@@ -41,4 +42,6 @@ public class Timer : MonoBehaviour
 
         tmp.text = string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, milliseconds);
     }
+
+   
 }
