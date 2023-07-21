@@ -2,26 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject loseImage;
+    [FormerlySerializedAs("startImage")] [SerializeField]
+    private GameObject startText; 
     private AudioSource musica;
 
     public float time = 90f;
     public bool finish = false;
-    
+    private bool gameStarted = false; // Variable para verificar si el juego ha comenzado
+
     public static GameManager Instance;
+
     // Start is called before the first frame update
     private void Awake()
     {
         Instance = this;
     }
+
     void Start()
     {
         musica = GetComponent<AudioSource>();
+        // Comienza el juego desactivado para que todo esté quieto
+        Time.timeScale = 0f;
         musica.Play();
     }
 
@@ -30,10 +38,18 @@ public class GameManager : MonoBehaviour
     {
         if (!finish)
         {
-            time -= Time.deltaTime;
-            if (time <= 0)
+            if (gameStarted) // Solo actualiza el tiempo si el juego ha comenzado
             {
-                LoseGame();
+                time -= Time.deltaTime;
+                if (time <= 0)
+                {
+                    LoseGame();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartGame();
             }
         }
         else
@@ -61,15 +77,20 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         loseImage.SetActive(true);
-        GoToMainMenu();            
+        GoToMainMenu();
         musica.Stop();
     }
 
     private void GoToMainMenu()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+    private void StartGame()
+    {
+        // Comienza el juego, activando el tiempo y permitiendo el movimiento
+        startText.SetActive(false);
+        Time.timeScale = 1f;
+        gameStarted = true;
+    }
 }

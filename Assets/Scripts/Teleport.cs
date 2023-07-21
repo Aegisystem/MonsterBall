@@ -19,7 +19,7 @@ public class Teleport : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         other.gameObject.transform.position = new Vector3(
             PortalFin.transform.position.x,
