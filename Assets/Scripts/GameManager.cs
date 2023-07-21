@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float time = 90f;
     public bool finish = false;
     private bool gameStarted = false; // Variable para verificar si el juego ha comenzado
+    private bool defeat = false;
 
     public static GameManager Instance;
 
@@ -47,6 +48,12 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            if (defeat)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                    GoToMainMenu();
+            }
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 StartGame();
@@ -76,8 +83,8 @@ public class GameManager : MonoBehaviour
     // Método para mostrar la imagen de derrota y marcar el juego como terminado
     public void LoseGame()
     {
+        defeat = true;
         loseImage.SetActive(true);
-        GoToMainMenu();
         musica.Stop();
     }
 
