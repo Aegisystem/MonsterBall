@@ -299,6 +299,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &69059694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7725802312842228368, guid: 3eddbc173d9d17743a812bd2b9adc8af, type: 3}
+  m_PrefabInstance: {fileID: 205053793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &69059695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2234369338428512359, guid: 3eddbc173d9d17743a812bd2b9adc8af, type: 3}
@@ -2004,11 +2009,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &452218489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7725802312842228368, guid: 3eddbc173d9d17743a812bd2b9adc8af, type: 3}
+  m_PrefabInstance: {fileID: 1480161049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &452218490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2234369338428512359, guid: 3eddbc173d9d17743a812bd2b9adc8af, type: 3}
   m_PrefabInstance: {fileID: 1480161049}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &452218493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452218489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c45643652270fe4ca4200c86a171d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortalFin: {fileID: 69059694}
 --- !u!1 &461978168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,6 +5815,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2234369338428512359, guid: 3eddbc173d9d17743a812bd2b9adc8af, type: 3}
   m_PrefabInstance: {fileID: 1741928765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312314386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312314382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c45643652270fe4ca4200c86a171d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortalFin: {fileID: 0}
 --- !u!1 &1313315709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c455996f6e6b49d418895f41b5216202, type: 3}
