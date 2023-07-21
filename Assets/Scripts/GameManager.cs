@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject loseImage;
+    private AudioSource musica;
 
     public float time = 90f;
     
@@ -18,7 +19,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-
+        musica = GetComponent<AudioSource>();
+        musica.Play();
     }
 
     // Update is called once per frame
@@ -27,7 +29,26 @@ public class GameManager : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0)
         {
+            
             loseImage.SetActive(true);
+            GoToMainMenu();            
+            musica.Stop();
+        }
+        
+    }
+
+    private void GoToMainMenu()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
     }
+
+    
+    
+
+    
+
+    
 }
