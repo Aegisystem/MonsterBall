@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseImage: {fileID: 1565083909}
-  time: 2
+  time: 90
 --- !u!4 &1899408056
 Transform:
   m_ObjectHideFlags: 0

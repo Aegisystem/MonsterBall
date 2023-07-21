@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject loseImage;
 
-    public float time = 2f;
+    public float time = 90f;
     
     public static GameManager Instance;
     // Start is called before the first frame update
