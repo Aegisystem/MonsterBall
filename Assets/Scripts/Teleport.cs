@@ -26,5 +26,7 @@ public class Teleport : MonoBehaviour
             PortalFin.transform.position.y+1.5f,
             PortalFin.transform.position.z
             );
+        other.gameObject.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        other.gameObject.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 }
